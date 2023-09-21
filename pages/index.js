@@ -10,7 +10,7 @@ export default function Home() {
   const [city, setCity] = useState("San Jose Del Monte");
   const [weather, setWeather] = useState({});
   const [loading, setLoading] = useState(false);
-  const [inputCity, setInputCity] = useState("San Jose Del Monte"); // New state for input
+  const [inputCity, setInputCity] = useState(""); // New state for input
 
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
 
@@ -71,13 +71,13 @@ export default function Home() {
             <input
               onChange={handleInputChange}
               value={inputCity}
-              className="bg-transparent border-none text-white focus:outline-none text-2xl"
+              className="bg-transparent border-none text-white focus:outline-none sm:text-1xl lg:text-2xl"
               type="text"
               placeholder="Search city"
             />
           </div>
           <button type="submit">
-            <BsSearch size={20} />
+            <BsSearch size={15} />
           </button>
         </form>
       </div>
