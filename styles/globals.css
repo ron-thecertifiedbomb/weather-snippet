@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.glass-bg {
+    background: rgba(0, 0, 0, 0.4); /* Adjust the opacity as needed */
+    backdrop-filter: blur(1px); /* Adjust the blur effect as needed */
+    border-radius: 10px; /* You can adjust the border-radius for rounded corners */
+    padding: 16px; /* Adjust padding as needed */
+    /* Add any other styles you want for the glass morphic effect */
+  }
+  
