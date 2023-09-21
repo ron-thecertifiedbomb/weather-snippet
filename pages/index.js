@@ -55,7 +55,7 @@ export default function Home() {
       {/* Overlay */}
    
 
-       <div className="glass-bg m-auto max-w-[427px] h-[600px] flex flex-col">
+       <div className="glass-bg m-auto max-w-[428px] w-full h-full flex flex-col">
         <div>{weather.main && <Weather data={weather} />}</div>
 
         <div className="h-full flex pl-8 pr-8 ">
