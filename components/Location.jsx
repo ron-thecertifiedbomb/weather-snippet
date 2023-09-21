@@ -50,7 +50,7 @@ const LocationComponent = () => {
           Latitude: {latitude.toFixed(6)}, Longitude: {longitude.toFixed(6)}
         </p>
       ) : (
-        <p>Loading location...</p>
+        <p className="text-[#53967A] text-[12px]">Loading location...</p>
       )}
       {city &&  <p className="text-[#53967A] text-[12px]">City: {city}</p>}
     </div>
