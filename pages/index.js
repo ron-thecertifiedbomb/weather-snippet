@@ -1,6 +1,7 @@
 import Head from "next/head";
 import WeatherApp from "../components/WeatherApp";
 import Clock from "../components/Clock/Clock";
+import Stopwatch from "../components/Stopwatch";
 
 
 export default function Home() {

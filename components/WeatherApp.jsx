@@ -6,6 +6,7 @@ import Weather from "../components/Weather";
 
 
 export default function WeatherApp() {
+  
   const [city, setCity] = useState("San Jose Del Monte");
   const [weather, setWeather] = useState({});
   const [placeholder, setPlaceholder] = useState("Search for a city");

@@ -10,13 +10,13 @@ const Weather = ({ data }) => {
           <Image
             src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
             alt="/"
-            width="130"
-            height="130"
+            width="100"
+            height="100"
           /> 
           {/* <p className="text-2xl">{data.weather[0].main}</p> */}
         </div> 
         <div className="flex flex-col justify-center items-center"> 
-        <p className="text-[18px] text-center mb-4">{data.name}</p>
+        <p className="text-2xl text-center mb-2">{data.name}</p>
         {/* <Image
             src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
             alt="/"
@@ -36,18 +36,18 @@ const Weather = ({ data }) => {
       
         <div className="flex gap-5 text-center justify-center">
           <div>
-            <p className=" font-normal text-xl">
+            <p className="font-bold text-xl">
               {data.main.feels_like.toFixed(0)}&#176;
             </p>
             <p className="text-xs">Feels Like</p>
           </div>
           <div>
-            <p className="font-normal text-xl">{data.main.humidity}%</p>
+            <p className="font-bold text-xl">{data.main.humidity}%</p>
             <p className="text-xs">Humidity</p>
           </div>
           <div>
-            <p className="font-normal text-xl">
-              {data.wind.speed.toFixed(0)} mph 
+            <p className="font-bold text-xl">
+              {data.wind.speed.toFixed(0)} MPH
             </p>
             <p className=" text-xs">Winds</p>
           </div>

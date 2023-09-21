@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import WeatherGenerator from "./WeatherGenerator";
 
 const LocationComponent = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState('null');
+  const [location, setLocation] = useState('')
 
   useEffect(() => {
     const getLocation = () => {
@@ -35,6 +37,9 @@ const LocationComponent = () => {
         .then((response) => {
           const city = response.data.results[0].components.city;
           setCity(city);
+          setLocation(city)
+          
+         
         })
         .catch((error) => {
           console.error("Error fetching city:", error);
@@ -42,17 +47,30 @@ const LocationComponent = () => {
     }
   }, [latitude, longitude]);
 
+
+
   return (
     <div>
+        
      
       {latitude !== null && longitude !== null ? (
-        <p className="text-[#53967A] text-[12px]">
-          Latitude: {latitude.toFixed(6)}, Longitude: {longitude.toFixed(6)}
+        <>
+         <p className="text-[#53967A] text-[12px]">
+          Latitude: {latitude.toFixed(6)}
         </p>
+        <p className="text-[#53967A] text-[12px]">
+         Longitude: {longitude.toFixed(6)}
+        </p>
+        </>
+       
+        
       ) : (
         <p className="text-[#53967A] text-[12px]">Loading location...</p>
       )}
-      {city &&  <p className="text-[#53967A] text-[12px]">City: {city}</p>}
+<>
+      {city && <p className="text-[#53967A] text-[12px]">City: {city}</p>}
+      <WeatherGenerator location={location} />
+      </>
     </div>
   );
 };

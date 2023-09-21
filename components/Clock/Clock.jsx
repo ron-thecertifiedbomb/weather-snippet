@@ -28,7 +28,8 @@ const Clock = () => {
       </div>
       <div className="flex flex-col-reverse w-full relative h-[500px]">
         <div className="clock">
-          <div className="inner-background">
+       
+           <div className="inner-background">
             <div
               className="hour_hand"
               style={{
@@ -48,7 +49,8 @@ const Clock = () => {
                 transform: `rotateZ(${secondRotation}deg)`,
               }}
             />
-          </div>
+           </div>
+     
         </div>
         <Time />
     
