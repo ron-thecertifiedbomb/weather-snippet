@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Time from "../Time";
 import Greeting from "./Greetings";
+import LocationComponent from "../Location";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
@@ -23,6 +24,7 @@ const Clock = () => {
     <div className="bg relative">
       <div className="absolute top-[30px] left-[35px] lg:top-[40px] lg:left-[40px]">
       <Greeting />
+      <LocationComponent />
       </div>
       <div className="flex flex-col-reverse w-full relative h-[500px]">
         <div className="clock">
