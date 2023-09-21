@@ -53,7 +53,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Overlay */}
-      <div className="top-0 left-0 right-0 bottom-0 bg-black/40 z-[1]">
+      <div className="top-0 left-0 right-0 bottom-0 bg-black/40 z-[1] h-full">
         {/* Background image */}
         <Image
           src={`https://source.unsplash.com/1600x900/?${city}`}
